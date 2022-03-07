@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "87d2b31e-9f83-41af-bfae-fc7d76096511",
+		"name": "los_galacticos_fc_api_v1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AddPlayer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nombre\":\"Carlos\",\n    \"apellido\":\"Arguello\",\n    \"edad\":\"13\",\n    \"categoria\":\"2009\",\n    \"nacionalidad\":\"Paraguaya\",\n    \"ciudad\":\"San Lorenzo\",\n    \"ci\":\"5257486\",\n    \"celular\":\"0982765298\",\n    \"inspeccionMedica\":\"si\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/v1/player",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"player"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPlayers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/v1/player?ciudad=San Lorenzo&categoria=2009&inspeccionMedica=si",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"player"
+					],
+					"query": [
+						{
+							"key": "ciudad",
+							"value": "San Lorenzo"
+						},
+						{
+							"key": "categoria",
+							"value": "2009"
+						},
+						{
+							"key": "inspeccionMedica",
+							"value": "si"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetOnePlayer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/v1/player/4255486",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"player",
+						"4255486"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdatePlayer",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nombre\":\"Carlos\",\n  \"apellido\":\"Arguello\",\n  \"edad\":\"13\",\n  \"categoria\":\"2009\",\n  \"nacionalidad\":\"Paraguaya\",\n  \"ciudad\":\"Asuncion\",\n  \"celular\":\"0982765298\",\n  \"inspeccionMedica\":\"si\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/v1/player/4255487",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"player",
+						"4255487"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeletePlayer",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/v1/player/4255487",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"player",
+						"4255487"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
