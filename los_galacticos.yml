@@ -13,8 +13,6 @@ basePath: "/v1"
 tags:
 - name: "player"
   description: "Player managment"
-- name: "FootballScholl"
-  description: "FootballScholl managment"
 schemes:
 - "http"
 paths:
@@ -112,6 +110,10 @@ paths:
           description: "Bad request"
           schema:
             $ref: "#/definitions/ErrorResponse"
+        "404":
+          description: "Bad request"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
         "500":
           description: "Internal server error"
           schema:
@@ -135,13 +137,17 @@ paths:
         description: "Data of the updated player"
         required: true
         schema:
-          $ref: "#/definitions/PlayerUpdate"
+          $ref: "#/definitions/Player"
       responses:
         "200":
           description: "successful operation"
           schema:
-            $ref: "#/definitions/Player"
+            $ref: "#/definitions/SuccessResponse"
         "400":
+          description: "Bad request"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+        "404":
           description: "Bad request"
           schema:
             $ref: "#/definitions/ErrorResponse"
@@ -172,6 +178,10 @@ paths:
           description: "Bad request"
           schema:
             $ref: "#/definitions/ErrorResponse"
+        "404":
+          description: "Bad request"
+          schema:
+            $ref: "#/definitions/ErrorResponse"
         "500":
           description: "Internal server error"
           schema:
@@ -187,45 +197,35 @@ definitions:
       edad:
         type: "integer"
       categoria:
-        type: "string"
+        type: "integer"
       nacionalidad:
         type: "string"
       ciudad:
         type: "string"
       ci:
-        type: "string"
+        type: "integer"
       celular:
        type: "string"
       inspeccionMedica:
-        type: "string"
-  PlayerUpdate:
-    type: "object"
-    properties:
-      nombre:
-        type: "string"
-      apellido:
-        type: "string"
-      edad:
-        type: "integer"
-      categoria:
-        type: "string"
-      ciudad:
-        type: "string"
-      inspeccionMedica:
-        type: "string"
+        type: "boolean"
   SuccessResponse:
     type: "object"
     properties:
       message:
         type: "string"
-      code:
-        type: "integer"
   ErrorResponse:
     type: "object"
     properties:
-      error:
-        type: "integer"
-      message:
-        type: "string"
-      detail:
-        type: "string"
+      errors:
+        type: "array"
+        items:
+          type: "object"
+          properties:
+            value:
+              type: "string"
+            msg:
+              type: "string"
+            param:
+              type: "string"
+            location:
+              type: "string"

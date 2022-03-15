@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "87d2b31e-9f83-41af-bfae-fc7d76096511",
+		"_postman_id": "bf7f16f5-cd4b-4f40-b369-3983ae4d9dfd",
 		"name": "los_galacticos_fc_api_v1",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -12,7 +12,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"nombre\":\"Carlos\",\n    \"apellido\":\"Arguello\",\n    \"edad\":\"13\",\n    \"categoria\":\"2009\",\n    \"nacionalidad\":\"Paraguaya\",\n    \"ciudad\":\"San Lorenzo\",\n    \"ci\":\"5257486\",\n    \"celular\":\"0982765298\",\n    \"inspeccionMedica\":\"si\"\n}",
+					"raw": "{\n    \"nombre\":\"Carlos\",\n    \"apellido\":\"Arguello\",\n    \"edad\":\"13\",\n    \"categoria\":\"2009\",\n    \"nacionalidad\":\"Paraguaya\",\n    \"ciudad\":\"Pedro Juan\",\n    \"ci\":\"4546665\",\n    \"celular\":\"0982765298\",\n    \"inspeccionMedica\":\"true\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -39,7 +39,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:3000/v1/player?ciudad=San Lorenzo&categoria=2009&inspeccionMedica=si",
+					"raw": "localhost:3000/v1/player?ciudad=&categoria=&inspeccionMedica=",
 					"host": [
 						"localhost"
 					],
@@ -51,15 +51,15 @@
 					"query": [
 						{
 							"key": "ciudad",
-							"value": "San Lorenzo"
+							"value": ""
 						},
 						{
 							"key": "categoria",
-							"value": "2009"
+							"value": ""
 						},
 						{
 							"key": "inspeccionMedica",
-							"value": "si"
+							"value": ""
 						}
 					]
 				}
@@ -72,7 +72,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:3000/v1/player/4255486",
+					"raw": "localhost:3000/v1/player/4546665",
 					"host": [
 						"localhost"
 					],
@@ -80,7 +80,7 @@
 					"path": [
 						"v1",
 						"player",
-						"4255486"
+						"4546665"
 					]
 				}
 			},
@@ -93,7 +93,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"nombre\":\"Carlos\",\n  \"apellido\":\"Arguello\",\n  \"edad\":\"13\",\n  \"categoria\":\"2009\",\n  \"nacionalidad\":\"Paraguaya\",\n  \"ciudad\":\"Asuncion\",\n  \"celular\":\"0982765298\",\n  \"inspeccionMedica\":\"si\"\n}",
+					"raw": "{\n    \"nombre\":\"Carlos\",\n    \"apellido\":\"Arguello\",\n    \"edad\":\"13\",\n    \"categoria\":\"2009\",\n    \"nacionalidad\":\"Paraguaya\",\n    \"ciudad\":\"Pedro Juan\",\n    \"ci\":\"4546665\",\n    \"celular\":\"0982765299\",\n    \"inspeccionMedica\":true\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -101,7 +101,7 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/v1/player/4255487",
+					"raw": "localhost:3000/v1/player/4546665",
 					"host": [
 						"localhost"
 					],
@@ -109,7 +109,7 @@
 					"path": [
 						"v1",
 						"player",
-						"4255487"
+						"4546665"
 					]
 				}
 			},
@@ -121,7 +121,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "localhost:3000/v1/player/4255487",
+					"raw": "localhost:3000/v1/player/4546665",
 					"host": [
 						"localhost"
 					],
@@ -129,7 +129,7 @@
 					"path": [
 						"v1",
 						"player",
-						"4255487"
+						"4546665"
 					]
 				}
 			},
